@@ -1,4 +1,6 @@
+/* src/index.css */
 :root {
+  /* Mantengo la configuración base de Vite, pero el stilo.css de Principal dominará el diseño. */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -24,8 +26,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* Elimino display: flex y place-items: center para que el grid ocupe todo el body */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -36,6 +37,7 @@ h1 {
 }
 
 button {
+  /* Dejo la configuración base, pero Bootstrap le aplicará más estilos */
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;

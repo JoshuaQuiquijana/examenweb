@@ -1,0 +1,129 @@
+:root {
+  /* Colores de Navidad */
+  --color-rojo-navidad: #c0392b; /* Rojo Intenso */
+  --color-verde-navidad: #27ae60; /* Verde Pino */
+  --color-dorado-navidad: #f1c40f; /* Dorado/Amarillo */
+  --color-fondo-nieve: #ecf0f1; /* Blanco Roto/Nieve */
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 150px 1fr 250px;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 15px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 15px;
+  background-color: var(--color-fondo-nieve); /* Fondo de nieve */
+  box-sizing: border-box; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más amigable */
+
+  grid-template-areas:
+    "logo titulo titulo"
+    "logo menu enlaces"
+    "logo contenido enlaces"
+    "footer footer footer";
+}
+
+.logo {
+  grid-area: logo;
+  background: var(--color-verde-navidad); /* Verde Pino */
+  color: white;
+  padding: 15px;
+  border-radius: 12px; /* Esquinas más redondeadas */
+  border: 3px solid var(--color-dorado-navidad); /* Borde dorado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo p {
+    color: var(--color-dorado-navidad);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 50%; /* Icono circular */
+  background: white; /* Fondo blanco para la imagen */
+  padding: 5px;
+}
+
+.titulo {
+  grid-area: titulo;
+  background: var(--color-rojo-navidad); /* Rojo Navidad */
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu {
+  grid-area: menu;
+  background: var(--color-verde-navidad); /* Verde de nuevo */
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.menu button {
+    /* Ajustamos los botones de Bootstrap para que se vean más festivos */
+    font-weight: bold;
+}
+
+.menu a {
+  color: var(--color-dorado-navidad); /* Enlaces dorados */
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.contenido {
+  grid-area: contenido;
+  background: white; /* Contenido principal blanco para destacar */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
+.enlaces {
+  grid-area: enlaces;
+  background: var(--color-rojo-navidad); /* Rojo Navidad */
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-dorado-navidad); /* Detalle Dorado */
+}
+
+.enlaces a {
+  color: var(--color-fondo-nieve); /* Enlaces color nieve */
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.footer {
+  grid-area: footer;
+  background: var(--color-dorado-navidad); /* Dorado */
+  color: var(--color-rojo-navidad); /* Texto rojo */
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
